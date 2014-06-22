@@ -1,0 +1,13 @@
+{
+  "name": "nest",
+  "version": "0.0.0",
+  "homepage": "https://github.com/johanjordaan/nest",
+  "authors": [
+    "Johan Jordaan <djjordaan@gmail.com>"
+  ],
+  "description": "Node Example Site Template",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "~2.1.1"
+  }
+}
