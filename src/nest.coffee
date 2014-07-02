@@ -96,12 +96,12 @@ init = (dir) ->
         console.log "Initialising [#{dir}]"
         # Standard dev environment files
         #
-        render_template path.join(__dirname,'nginx.conf.template'), path.join(dir,'nginx.conf'), values 
-        render_template path.join(__dirname,'bower.json.template'), path.join(dir,'bower.json'), values 
-        render_template path.join(__dirname,'package.json.template'), path.join(dir,'package.json'), values   
-        render_template path.join(__dirname,'README.md.template'), path.join(dir,'README.md'), values  
-        render_template path.join(__dirname,'LICENSE.template'), path.join(dir,'LICENSE'), values
-        render_template path.join(__dirname,'.gitignore.template'), path.join(dir,'.gitignore')
+        render_template path.join(__dirname,'templates','nginx.conf.template'), path.join(dir,'nginx.conf'), values 
+        render_template path.join(__dirname,'templates','bower.json.template'), path.join(dir,'bower.json'), values 
+        render_template path.join(__dirname,'templates','package.json.template'), path.join(dir,'package.json'), values   
+        render_template path.join(__dirname,'templates','README.md.template'), path.join(dir,'README.md'), values  
+        render_template path.join(__dirname,'templates','LICENSE.template'), path.join(dir,'LICENSE'), values
+        render_template path.join(__dirname,'templates','.gitignore.template'), path.join(dir,'.gitignore')
         copy_file path.join(__dirname,'gruntfile.coffee'), path.join(dir,'gruntfile.coffee')
 
         # Demo site files
