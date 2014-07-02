@@ -19,8 +19,8 @@ node_modules
 #
 bower_components
 tmp
-static
-site
-scripts
+static/**
+site/**
+scripts/**
 
 
