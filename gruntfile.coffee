@@ -11,12 +11,6 @@ module.exports = (grunt) ->
         dest: 'dist/<%= pkg.name %>.min.js'
 
     coffee: 
-      concat:
-        options: 
-          bare: true
-        files:
-          'dist/<%= pkg.name %>.js' : 'src/main/**/*.coffee'
-
       singles:
         options:
           bare : true
@@ -42,7 +36,7 @@ module.exports = (grunt) ->
           watch : ['server']
 
     less:
-      dev:
+      all:
         files: [
           { expand: true,cwd:'src/',src: ['**/*.less'], dest: './' , ext:'.css'}
         ]  
@@ -56,12 +50,11 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks('grunt-contrib-uglify')
   grunt.loadNpmTasks('grunt-contrib-coffee')
   grunt.loadNpmTasks('grunt-mocha-test')
-  grunt.loadNpmTasks('grunt-shell')
   grunt.loadNpmTasks('grunt-nodemon')
   grunt.loadNpmTasks('grunt-contrib-less')
   grunt.loadNpmTasks('grunt-contrib-copy')
   
-  grunt.registerTask('default', ['coffee:singles','less:dev','copy:html','mochaTest'])
+  grunt.registerTask('default', ['coffee:singles','less:all','copy:html','mochaTest'])
   grunt.registerTask('run', ['default','nodemon:dev'])
 
 

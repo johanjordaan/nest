@@ -1,0 +1,25 @@
+{
+  "name": "<%= name %>",
+  "description": "<%= description %>",
+  "author": "<%= author %> <<%= email %>>",
+  "version": "0.0.1",
+  "license": "MIT",
+  "dependencies": {
+    "express": "~4.0.0",
+    "body-parser": "~1.0.1",
+    "underscore": "~1.6.0",
+    "mongoose": "~3.8.12",
+    "async": "~0.9.0"
+  },
+  "devDependencies": {
+    "chai": "*",
+    
+    "grunt-contrib-uglify": "*",
+    "grunt-nodemon": "~0.2.1",
+    "grunt-contrib-coffee": "~0.10.1",
+    "grunt-contrib-less": "*",
+    "grunt-mocha-test": "~0.10.2",
+    "grunt-contrib-copy": "~0.5.0"
+  },
+  "engine": "node >= 0.4.1"
+}

@@ -1,0 +1,13 @@
+{
+  "name": ",<%= name %>",
+  "description": "<%= description %>",
+  "version": "0.0.1",
+  "homepage": "<%= git_site %>",
+  "authors": [
+    "<%= author %> <<%= email %>>"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "~2.1.1"
+  }
+}

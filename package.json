@@ -4,7 +4,10 @@
   "author": "Johan Jordaan <me@here.com>",
   "version": "0.0.1",
   "dependencies": {
-    "three" : "*"
+    "underscore": "~1.6.0",
+    "prompt": "~0.2.13",
+    "mkdirp": "~0.5.0",
+    "ncp": "~0.5.1"
   },
   "devDependencies": {
     "chai": "*",
@@ -19,5 +22,9 @@
     "underscore": "~1.6.0",
     "grunt-contrib-copy": "~0.5.0"
   },
-  "engine": "node >= 0.4.1"
+  "engine": "node >= 0.4.1",
+  "main": "index.js",
+  "bin": {
+    "nest": "index.js"
+  }
 }

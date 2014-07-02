@@ -1,18 +1,15 @@
-fs = require('fs')
-_ = require('underscore')
+"use strict"
 
-express = require('express')
-bodyParser = require('body-parser')
+_ = require 'underscore'
+http = require 'http' 
 
-app = express()
+app_setup = require './app'
 
-app.use bodyParser()
-app.use(express.static('bower_components'))
+port = "<%= site_node_port %>"
+if(_.isNaN(Number(port)))
+  port = 3000 
+name = "nest"
 
-server = app.listen(3000)
-
-app.get '/', (req, res) ->
-  res.send 'hello world'
-
-if module?
-  module.exports.server = server
+app_setup name, port, (app) ->
+  http.createServer(app).listen app.get('port'), () ->
+    console.log("Express(#{app.get('name')}) server listening on port [#{app.get('port')}]")
