@@ -5,21 +5,28 @@ Node Example Site Template
 
 This is a template project that includes all the things I need each time I strat a new project.
 
+Technology Stack
+================
+* nginx
+* express
+* mongodb
+* coffeescript
+* less
+* angular
+
 Site Features
 =============
-nginx
-express
-mongodb
-coffeescript
-less
+* auth module (with registration and password reset)
+* sample module to get you going
+
 
 
 Global Requirements (Those not in the generated package.json)
 ===================
 
-sudo npm install coffee-script -g
-sudo npm install grunt -g
-sudo npm install bower -g 
+`sudo npm install coffee-script -g`
+`sudo npm install grunt -g`
+`sudo npm install bower -g`
 
 
 Example usage:
