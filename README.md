@@ -13,6 +13,7 @@ Technology Stack
 * coffeescript
 * less
 * angular
+* requirejs
 
 Site Features
 =============
@@ -20,9 +21,9 @@ Site Features
 * sample module to get you going
 
 
-
-Global Requirements (Those not in the generated package.json)
+Global Requirements 
 ===================
+(Those not in the generated package.json)
 
 ```
 sudo npm install coffee-script -g

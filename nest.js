@@ -123,13 +123,12 @@ init = function(dir) {
         render_template(path.join(__dirname, 'templates', 'LICENSE.template'), path.join(dir, 'LICENSE'), values);
         render_template(path.join(__dirname, 'templates', '.gitignore.template'), path.join(dir, '.gitignore'));
         copy_file(path.join(__dirname, 'gruntfile.coffee'), path.join(dir, 'gruntfile.coffee'));
-        render_template(path.join(__dirname, 'src', 'site', 'server.coffee'), path.join(dir, 'src', 'site', 'server.coffee'), values);
         return ncp(path.join(__dirname, 'src'), path.join(dir, 'src'), function(err) {
           if (err) {
             throw err;
-          } else {
-            return console.log('Done...');
           }
+          render_template(path.join(__dirname, 'src', 'site', 'server.coffee'), path.join(dir, 'src', 'site', 'server.coffee'), values);
+          return console.log('Done...');
         });
       });
     }

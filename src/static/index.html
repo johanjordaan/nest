@@ -1,15 +1,14 @@
+<!doctype html>
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="css/site.css">   
-    <script src="bower/jquery/dist/jquery.js"></script>
+    <title>Nest</title>
+    <link rel="stylesheet" href="/bower/bootstrap/dist/css/bootstrap.min.css"></link>
+    <link rel="stylesheet" href="/bower/bootstrap/dist/css/bootstrap-theme.min.css"></link>
+    
+    <link rel="stylesheet" type="text/css" href="css/site.css"> </link>
+    <script data-main="js/main" src="/bower/requirejs/require.js"></script>
   </head>
-
-  <script>
-    $(function() {
-      $('#from').text('from johan');
-    });
-  </script>
   <body>
-    <i>Hallo world...<span id="from"></span> </i> 
+    <div ng-view></div>
   </body>
 </html>

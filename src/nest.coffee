@@ -106,12 +106,12 @@ init = (dir) ->
 
         # Demo site files
         #
-        render_template path.join(__dirname,'src','site','server.coffee'), path.join(dir,'src','site','server.coffee'), values
         ncp path.join(__dirname,'src'),path.join(dir,'src'), (err) ->
           if err
             throw err
-          else 
-            console.log 'Done...'
+
+          render_template path.join(__dirname,'src','site','server.coffee'), path.join(dir,'src','site','server.coffee'), values
+          console.log 'Done...'
 
 
 
