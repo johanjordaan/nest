@@ -24,10 +24,11 @@ Site Features
 Global Requirements (Those not in the generated package.json)
 ===================
 
-`sudo npm install coffee-script -g`
-`sudo npm install grunt -g`
-`sudo npm install bower -g`
-
+```
+sudo npm install coffee-script -g
+sudo npm install grunt -g
+sudo npm install bower -g
+```
 
 Example usage:
 ==============
